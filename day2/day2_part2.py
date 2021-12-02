@@ -1,4 +1,4 @@
-f=open("day2_inputs.txt")
+f=open("test_inputs.txt")
 r=f.read()
 r=r.split("\n")
 pos=[0,0]
