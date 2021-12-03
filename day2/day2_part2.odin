@@ -5,7 +5,7 @@ import "core:strings"
 import "core:strconv"
 
 main :: proc() {
-    inputs:=string(#load("test_inputs.txt"))
+    inputs:=string(#load("day2_inputs.txt"))
     arr:=strings.split(inputs,"\n")
     pos:=[2]int{0,0}
     aim:int=0
