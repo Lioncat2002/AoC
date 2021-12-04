@@ -23,16 +23,32 @@ def get_sum(matrix):
     return sum
 
 def boards_matching():
-    for n in nums:
+    score=[]
+    for n in range(len(nums)):
         for i in range(len(boards)):
             for j in range(len(boards[i])):
           
-                if str(n) in boards[i][j]:
-                    boards[i][j][boards[i][j].index(str(n))]='X'
+                if str(nums[n]) in boards[i][j]:
+                    boards[i][j][boards[i][j].index(str(nums[n]))]='X'
                 for k in range(5):
                     col=match_columns(boards[i],k)
                     if boards[i][j]==['X', 'X', 'X', 'X', 'X'] or col==['X', 'X', 'X', 'X', 'X']:
-                        print(get_sum(boards[i])*n)
-                        return
-boards_matching()
+                        #score.append(get_sum(boards[i])*n)
+                
+                        if len(boards)==1:
+                            
+                            print(get_sum(boards[0])*nums[n])
+                            boards.pop()
+                            return 
+
+                        else:
+                            boards.pop(i)
+                            return
+
+                        
+                       
+    
+                    
+while len(boards):
+    boards_matching()
 f.close()
